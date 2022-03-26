@@ -8,7 +8,6 @@ class Service:
         
     """Make a prediction from model using dependencies predictions"""
     def predict(self):
-        """Get all predictions from predict method of dependencies"""
         results = []
         for dependency in self.dependencies:
             results.append(dependency.predict())

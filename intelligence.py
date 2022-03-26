@@ -2,6 +2,7 @@ from .input import Input
 from .output import Output
 from .module import Module
 from .service import Service
+from .loading_manager import LoadingManager
 
 class Intelligence:
     """Create a class of intelligence which contains inputs, outputs, modules and services"""
@@ -20,5 +21,5 @@ class Intelligence:
     
     """Activate regulator service in services with input data"""
     def activate_regulator(self):
-        self.services['Regulator'].activate(self.get_input_data())
+        self.services['Regulator'].predict(self.get_input_data())
     
