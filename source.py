@@ -14,3 +14,12 @@ class Source:
             return requests.get(self.url).text
         else:
             return None
+    
+    """Post data to url in specified format"""
+    def post_data(self, data):
+        if self.data_format == 'json':
+            return requests.post(self.url, json=data)
+        elif self.data_format == 'xml':
+            return requests.post(self.url, data=data)
+        else:
+            return None

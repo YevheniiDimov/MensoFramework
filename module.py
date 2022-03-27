@@ -1,3 +1,5 @@
+import json
+
 class Module:
     """Create module class with name, model, dependencies (another modules) and hash"""
     def __init__(self, name, model, dependencies, hash):
@@ -15,4 +17,6 @@ class Module:
             
         return self.model.predict(results)
     
-    
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)

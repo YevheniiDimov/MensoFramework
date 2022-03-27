@@ -1,3 +1,5 @@
+import json
+
 class Service:
     """Create service class with name, model, dependencies (another services) and hash"""
     def __init__(self, name, model, dependencies, hash):
@@ -14,4 +16,6 @@ class Service:
             
         return self.model.predict(results)
     
-    
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)
