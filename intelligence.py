@@ -1,8 +1,8 @@
-from .input import Input
-from .output import Output
-from .module import Module
-from .service import Service
-from .loading_manager import LoadingManager
+from input import Input
+from output import Output
+from module import Module
+from service import Service
+from loading_manager import LoadingManager
 
 class Intelligence:
     """Create a class of intelligence which contains inputs, outputs, modules and services"""

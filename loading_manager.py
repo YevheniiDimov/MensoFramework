@@ -1,7 +1,7 @@
-from .input import Input
-from .output import Output
-from .module import Module
-from .service import Service
+from input import Input
+from output import Output
+from module import Module
+from service import Service
 import json
 import os
 

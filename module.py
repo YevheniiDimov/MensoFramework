@@ -2,11 +2,11 @@ import json
 
 class Module:
     """Create module class with name, model, dependencies (another modules) and hash"""
-    def __init__(self, name, model, dependencies, hash):
+    def __init__(self, name, model, dependencies):
         self.name = name
         self.model = model
         self.dependencies = dependencies
-        self.hash = hash
+        self.hash = hash(self)
         
     """Make a prediction from model using dependencies predictions"""
     def predict(self):
